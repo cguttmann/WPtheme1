@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Frontend & Backend Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple Frontend & Backend Demo</h1>
+            <p>A basic application demonstrating frontend-backend communication</p>
+        </header>
+
+        <main>
+            <!-- Add New Item Form -->
+            <section class="add-item-section">
+                <h2>Add New Item</h2>
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="itemName">Name:</label>
+                        <input type="text" id="itemName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Description:</label>
+                        <textarea id="itemDescription" name="description" required></textarea>
+                    </div>
+                    <button type="submit">Add Item</button>
+                </form>
+            </section>
+
+            <!-- Items List -->
+            <section class="items-section">
+                <h2>Items</h2>
+                <div id="loading" class="loading">Loading...</div>
+                <div id="itemsList" class="items-list"></div>
+            </section>
+        </main>
+
+        <!-- Modal for editing items -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Item</h2>
+                <form id="editItemForm">
+                    <input type="hidden" id="editItemId">
+                    <div class="form-group">
+                        <label for="editItemName">Name:</label>
+                        <input type="text" id="editItemName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editItemDescription">Description:</label>
+                        <textarea id="editItemDescription" name="description" required></textarea>
+                    </div>
+                    <button type="submit">Update Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
